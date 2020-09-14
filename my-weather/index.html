@@ -19,9 +19,10 @@
     <!--Nav-->
 
     <!--Hero-->
-    <div class="py-5 ">
-        <nav>
-            <div class="container mx-auto px-6 py-2 flex justify-between align-middle items-center">
+    <div class="flex-grow flex container mx-auto justify-between">
+    <div class="flex flex-col w-full">
+        <nav class=" mt-5">
+            <div class="container mx-auto px-6 flex justify-between align-middle items-center">
                 <a class=" text-white font-bold text-2xl lg:text-sm" href="#">
                     the.weather
                 </a>
@@ -34,37 +35,23 @@
                         </svg>
                     </button>
                 </div>
-                <div class="hidden lg:block">
-                    <div class="pt-2 relative mx-auto text-white">
-                        <input class=" placeholder-gray-300 border-b-2 border-gray-100 text-white bg-transparent h-10 px-5 pr-16 text-sm focus:outline-none"
-                          type="search" name="search" placeholder="Search">
-                        <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
-                          <svg class=" text-white h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                            viewBox="0 0 56.966 56.966"  xml:space="preserve"
-                            width="512px" height="512px">
-                            <path
-                              d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-                          </svg>
-                        </button>
-                      </div>
-                </div>
+                
             </div>
         </nav>
         <div class="weather_container container mx-auto px-6">
             <div class=" flex flex-row items-center align-middle">
                 <h1 id="temprature-degrees" class="degrees font-semibold mb-2 text-white">
-                28
+                ?
                 </h1><h1 class="degrees font-semibold text-white"><sup>oC</sup></h1>
                 <div class=" flex flex-col justify-center m-4 leading-snug">
-                    <h2 id="location-name" class=" degrees_location text-5xl text-white">Kampala</h2>
-                    <span id="date-time" class=" text-gray-100 font-medium text-sm text-center degrees_location tracking-wide">04:00 - Friday, 11 Sept '20</span>
+                    <h2 id="location-name" class=" degrees_location text-5xl text-white">?</h2>
+                    <span id="date-time" class=" text-gray-100 font-medium text-sm text-center degrees_location tracking-wide">?</span>
                 </div>
                 <div class=" flex flex-col justify-center leading-snug items-center align-middle m-6">
                     <div class="text-sm">
                         <img id="icon-info" width="65px" height="65px" src="" alt="" srcset="">
                     </div>
-                    <span id="temprature-description" class="text-gray-100 text-sm text-center degrees_location tracking-wide degrees_location">Sunny</span>
+                    <span id="temprature-description" class="text-gray-100 text-sm text-center degrees_location tracking-wide degrees_location">?</span>
                 </div>
             </div>
             <!-- <h3 class="text-2xl mb-8 text-gray-200">
@@ -74,6 +61,34 @@
                 Pre Order
             </button> -->
         </div>
+    </div>
+    <section class=" h-full">
+        <div class="hidden lg:block">
+            <div class="top-banner pt-2 relative mx-auto text-white">
+                <form>
+                    <input
+                        class=" placeholder-gray-300 border-b-2 border-gray-100 text-white bg-transparent h-10 px-5 pr-16 text-sm focus:outline-none"
+                        type="search" name="search" placeholder="Search">
+                    <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+                        <svg class=" text-white h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            viewBox="0 0 56.966 56.966" xml:space="preserve" width="512px" height="512px">
+                            <path
+                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                    </button>
+                </form>
+              </div>
+            <div class="ajax-section ">
+                <div class="msg"></div>
+                <div>
+                    <ul class="cities">
+            
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     </div>
     <!--Footer-->
     <!-- <footer class="bg-gray-100">
@@ -135,7 +150,8 @@
             </div>
         </div>
     </footer> -->
-    <script>
+    
+    <script>        
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
               navigator.serviceWorker.register('./serviceworker.js')
@@ -144,6 +160,80 @@
             })
           }
       </script>
+      <script>
+        const form = document.querySelector("form");
+        const input = document.querySelector("input");
+        const msg = document.querySelector(".msg");
+        const list = document.querySelector(".ajax-section .cities");
+        /*PUT YOUR OWN KEY HERE - THIS MIGHT NOT WORK
+        SUBSCRIBE HERE: https://home.openweathermap.org/users/sign_up*/
+        const apiKey = "4d8fb5b93d4af21d66a2948710284366";
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            const listItems = list.querySelectorAll(".ajax-section .city");
+            const inputVal = input.value;
+
+            //ajax here
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const { main, name, sys, weather } = data;
+                    const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]
+                        }@2x.png`;
+
+                    const li = document.createElement("li");
+                    li.classList.add("city");
+                    const markup = `
+            <h2 class="city-name" data-name="${name},${sys.country}">
+              <span>${name}</span>
+              <sup>${sys.country}</sup>
+            </h2>
+            <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+            <figure>
+              <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
+              <figcaption>${weather[0]["description"]}</figcaption>
+            </figure>
+          `;
+                    li.innerHTML = markup;
+                    list.appendChild(li);
+                })
+                .catch(() => {
+                    msg.textContent = "Please search for a valid city 😩";
+                });
+
+            msg.textContent = "";
+            form.reset();
+            input.focus();
+        });
+    </script> 
 </body>
 
 </html>
+<!-- <div class="hidden lg:block">
+    <div class="top-banner pt-2 relative mx-auto text-white">
+        <form>
+            <input
+                class=" placeholder-gray-300 border-b-2 border-gray-100 text-white bg-transparent h-10 px-5 pr-16 text-sm focus:outline-none"
+                type="search" name="search" placeholder="Search">
+            <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+                <svg class=" text-white h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                    viewBox="0 0 56.966 56.966" xml:space="preserve" width="512px" height="512px">
+                    <path
+                        d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                </svg>
+            </button>
+        </form>
+      </div>
+    <div class="ajax-section">
+        <div class="msg"></div>
+        <div>
+            <ul class="cities">
+    
+            </ul>
+        </div>
+    </div>
+</div> -->
