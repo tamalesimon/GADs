@@ -79,9 +79,10 @@
                     </button>
                 </form>
               </div>
-            <div class="ajax-section ">
-                <div class="msg"></div>
-                <div>
+              <div class="msg text-xs"></div>
+            <div class="ajax-section flex flex-row justify-between">
+                
+                <div class=" inline-block">
                     <ul class="cities">
             
                     </ul>
@@ -187,15 +188,19 @@
                     const li = document.createElement("li");
                     li.classList.add("city");
                     const markup = `
-            <h2 class="city-name" data-name="${name},${sys.country}">
-              <span>${name}</span>
-              <sup>${sys.country}</sup>
-            </h2>
-            <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
-            <figure>
-              <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
-              <figcaption>${weather[0]["description"]}</figcaption>
-            </figure>
+                <div class="bg-white mt-2 flex flex-row rounded-md shadow-sm justify-between p-1 w-full bg-opacity-25 leading-snug">
+                    <div class="flex flex-row justify-between align-middle mt-3">
+                        <h2 class="city-name" data-name="${name},${sys.country}">
+                            <span>${name}</span>
+                            <sup>${sys.country}</sup>
+                        </h2>
+                        <div class="city-temp ml-2">${Math.round(main.temp)}<sup>°C</sup></div>
+                    </div>
+                    <div class=" flex flex-row items-center align-middle">
+                        <img class="city-icon" width="20%" height="20%" src=${icon} alt=${weather[0]["main"]}>
+                        <span>${weather[0]["description"]}</span>
+                    </div>
+                </div>
           `;
                     li.innerHTML = markup;
                     list.appendChild(li);
