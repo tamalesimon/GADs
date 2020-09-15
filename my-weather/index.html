@@ -44,12 +44,15 @@
                 ?
                 </h1><h1 class="degrees font-semibold text-white"><sup>oC</sup></h1>
                 <div class=" flex flex-col justify-center m-4 leading-snug">
-                    <h2 id="location-name" class=" degrees_location text-5xl text-white">?</h2>
+                    <div class="flex flex-row">
+                        <h2 id="location-name" class=" degrees_location text-5xl text-white">?</h2>
+                        <span id="place-code" class=" text-white font-medium"></span>
+                    </div>
                     <span id="date-time" class=" text-gray-100 font-medium text-sm text-center degrees_location tracking-wide">?</span>
                 </div>
                 <div class=" flex flex-col justify-center leading-snug items-center align-middle m-6">
                     <div class="text-sm">
-                        <img id="icon-info" width="65px" height="65px" src="" alt="" srcset="">
+                        <img id="icon-info" class=" text-white" width="65px" height="65px" src="" alt="" srcset="">
                     </div>
                     <span id="temprature-description" class="text-gray-100 text-sm text-center degrees_location tracking-wide degrees_location">?</span>
                 </div>
