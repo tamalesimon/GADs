@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
             }@2x.png`;
                 
                 let current_datetime = new Date();
-                var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
                 var month=new Array();
                 month[0]="Jan";
                 month[1]="Feb";
