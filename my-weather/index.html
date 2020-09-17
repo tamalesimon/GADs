@@ -57,12 +57,7 @@
                     <span id="temprature-description" class="text-gray-100 text-sm text-center degrees_location tracking-wide degrees_location">?</span>
                 </div>
             </div>
-            <!-- <h3 class="text-2xl mb-8 text-gray-200">
-                Monitor your health vitals smartly anywhere you go.
-            </h3>
-            <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
-                Pre Order
-            </button> -->
+           
         </div>
     </div>
     <section class=" h-full">
@@ -94,67 +89,7 @@
         </div>
     </section>
     </div>
-    <!--Footer-->
-    <!-- <footer class="bg-gray-100">
-        <div class="container mx-auto px-6 pt-10 pb-6">
-            <div class="flex flex-wrap">
-                <div class="w-full md:w-1/4 text-center md:text-left ">
-                    <h5 class="uppercase mb-6 font-bold">Links</h5>
-                    <ul class="mb-4">
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">FAQ</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Help</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Support</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4 text-center md:text-left ">
-                    <h5 class="uppercase mb-6 font-bold">Legal</h5>
-                    <ul class="mb-4">
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Terms</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4 text-center md:text-left ">
-                    <h5 class="uppercase mb-6 font-bold">Social</h5>
-                    <ul class="mb-4">
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Facebook</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Linkedin</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Twitter</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4 text-center md:text-left ">
-                    <h5 class="uppercase mb-6 font-bold">Company</h5>
-                    <ul class="mb-4">
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Official Blog</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">About Us</a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer> -->
-    
+    <!--Footer-->    
     <script>        
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -169,8 +104,7 @@
         const input = document.querySelector("input");
         const msg = document.querySelector(".msg");
         const list = document.querySelector(".ajax-section .cities");
-        /*PUT YOUR OWN KEY HERE - THIS MIGHT NOT WORK
-        SUBSCRIBE HERE: https://home.openweathermap.org/users/sign_up*/
+        
         const apiKey = "f33a484cf794d08d0148764789aaba32";
 
         form.addEventListener("submit", e => {
@@ -203,7 +137,7 @@
                         <img class="city-icon" width="20%" height="20%" src=${icon} alt=${weather[0]["main"]}>
                         <span>${weather[0]["description"]}</span>
                     </div>
-                    <div class="cursor-pointer" onClick="removeBookMark()"" ><svg xmlns="http://www.w3.org/2000/svg" class=" border-transparentw-4 h-4 hover:text-white text-gray-700" viewBox="0 0 20 20" fill="currentColor">
+                    <div class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class=" border-transparentw-4 h-4 hover:text-white text-gray-700" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg></div>
                 </div>
@@ -219,38 +153,9 @@
             form.reset();
             input.focus();
 
-            function removeBookMark() {
-                // remove this button and its input
-                div.removeChild(this.previousElementSibling);
-                div.removeChild(this);
-            }
+
         });
     </script> 
 </body>
 
 </html>
-<!-- <div class="hidden lg:block">
-    <div class="top-banner pt-2 relative mx-auto text-white">
-        <form>
-            <input
-                class=" placeholder-gray-300 border-b-2 border-gray-100 text-white bg-transparent h-10 px-5 pr-16 text-sm focus:outline-none"
-                type="search" name="search" placeholder="Search">
-            <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
-                <svg class=" text-white h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                    viewBox="0 0 56.966 56.966" xml:space="preserve" width="512px" height="512px">
-                    <path
-                        d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-                </svg>
-            </button>
-        </form>
-      </div>
-    <div class="ajax-section">
-        <div class="msg"></div>
-        <div>
-            <ul class="cities">
-    
-            </ul>
-        </div>
-    </div>
-</div> -->
