@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
 
                 return cache.addAll(urlsToCache);
             })
-    )
+    );
 });
 
 //Listen for requests
@@ -21,9 +21,9 @@ self.addEventListener('fetch', (event) => {
         caches.match(event.request)
         .then(() => {
             return fetch(event.request)
-                .catch(() => caches.match('bad-connection.html'))
+                .catch(() => caches.match('bad-connection.html'));
         })
-    )
+    );
 });
 
 //Activate the Service Worker
@@ -39,6 +39,6 @@ self.addEventListener('activate', (event) => {
                 }
             })
         ))
-    )
+    );
 
 });
