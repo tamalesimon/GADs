@@ -40,16 +40,16 @@
             </div>
                            
         </div>
-        <section class=" flex flex-row justify-center container mx-auto ">
+        <section class="flex justify-center container mx-auto ">
             <div class="block">
                 <div class="top-banner pt-2 relative mx-auto text-white">
                     
                   </div>
                   <div class="msg text-xs text-center"></div>
-                <div class="ajax-section text-center p-8 flex flex-row justify-between">
+                <div class="ajax-section text-center p-8 flex flex-row">
                     
                     <div class="">
-                        <ul class="cities p-2">
+                        <ul class="cities">
                 
                         </ul>
                     </div>
@@ -142,7 +142,7 @@
                     const li = document.createElement("li");
                     li.classList.add("city");
                     const markup = `
-                <div id="weather-card" class="bg-white mt-2 flex flex-row rounded-md hover:shadow-md justify-evenly py-2 px-2 w-full bg-opacity-25 leading-snug">
+                <div id="weather-card" class="bg-white mt-2 flex flex-row rounded-md hover:shadow-md justify-between py-2 px-2 w-full bg-opacity-25 leading-snug">
                     <div class="flex flex-row justify-between align-middle mt-3">
                         <h2 class="city-name" data-name="${name},${sys.country}">
                             <span>${name}</span>
@@ -150,7 +150,7 @@
                         </h2>
                         <div class="city-temp ml-2">${Math.round(main.temp)}<sup>°C</sup></div>
                     </div>
-                    <div class="flex flex-row items-center align-middle">
+                    <div class="flex flex-row items-center  align-middle">
                         <img class="city-icon" width="20%" height="20%" src=${icon} alt=${weather[0]["main"]}>
                         <span>${weather[0]["description"]}</span>
                     </div>
